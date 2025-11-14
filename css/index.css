@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    overflow: hidden;
+    color: white;
+}
+
+/* 
+.background-blur {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,0,102,0.4), rgba(0,0,0,0));
+    filter: blur(150px);
+    top: -100px;
+    left: -100px;
+    z-index: 1;
+}
+Statický blur */
+/* Pohybující se blur za myší */
+.cursor-blur {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0,150,255,0.4), rgba(0,0,0,0));
+    filter: blur(80px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+/* Canvas tečky */
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeDown 1.4s ease-out forwards;
+}
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    animation: fadeDown 1.8s ease-out forwards;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    backdrop-filter: blur(6px);
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Container */
+#cross-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Jednotlivé křížky */
+.cross {
+    position: absolute;
+    font-size: 45px;
+    color: rgba(255,255,255,0.12);
+    animation: floatCross 5s ease-in-out infinite;
+    transition: transform 0.2s linear;
+}
+
+/* jemné plavání */
+@keyframes floatCross {
+    0%   { transform: translateY(0px) scale(1); }
+    50%  { transform: translateY(-12px) scale(1.05); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+@keyframes fadeDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
