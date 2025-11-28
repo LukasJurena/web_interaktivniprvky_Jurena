@@ -7,19 +7,6 @@ body {
     color: white;
 }
 
-/* 
-.background-blur {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255,0,102,0.4), rgba(0,0,0,0));
-    filter: blur(150px);
-    top: -100px;
-    left: -100px;
-    z-index: 1;
-}
-Statický blur */
-/* Pohybující se blur za myší */
 .cursor-blur {
     position: absolute;
     width: 250px;

@@ -143,11 +143,14 @@
       user-select: none;
       font-weight: 700;
     }
+    .contact{
+      align-items: center;
+    }
     .contact p{
-        text-align: center;
+        text-align: left;
     }
     .contact a{
-        width: auto;
+        width: 80px;
         align-items: center;
         text-align: center;
         display: block;

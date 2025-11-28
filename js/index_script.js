@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     //POHYBLIVÝ BLUR ZA MYŠÍ
