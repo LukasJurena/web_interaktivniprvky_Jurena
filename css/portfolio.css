@@ -61,6 +61,7 @@
       margin-bottom: 60px;
       font-weight: 700;
       text-align: center;
+      animation: fadeDown 1.4s ease-out forwards;
     }
 
     .project-section {
@@ -68,6 +69,7 @@
       flex-direction: column;
       gap: 80px;
       margin-bottom: 60px;
+      animation: fadeRight 1.4s ease-out forwards;
     }
 
     .project {
@@ -80,6 +82,7 @@
 
     .project:nth-child(even) {
       flex-direction: row-reverse;
+      animation: fadeLeft 1.4s ease-out forwards;
     }
 
     .project img {
@@ -170,4 +173,53 @@
     .contact a:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 40px var(--accent);
+    }
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-25px);
+        filter: blur(6px);
+      }
+      50% {
+        opacity: 0.6;
+        filter: blur(3px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+    @keyframes fadeRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-25px);
+        filter: blur(6px);
+      }
+      50% {
+        opacity: 0.6;
+        filter: blur(3px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+      }
+    }
+    @keyframes fadeLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(50px);
+        filter: blur(6px);
+      }
+      50% {
+        opacity: 0.6;
+        filter: blur(3px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+      }
     }

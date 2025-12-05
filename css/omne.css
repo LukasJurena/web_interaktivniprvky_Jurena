@@ -63,12 +63,14 @@
       font-size: 3.5rem;
       margin-bottom: 20px;
       font-weight: 700;
+      animation: fadeDown 1.4s ease-out forwards;
     }
 
     p {
       font-size: 1.25rem;
       line-height: 1.7;
       opacity: 0.85;
+      animation: fadeRight 1.4s ease-out forwards;
     }
 
     .card {
@@ -133,4 +135,37 @@
       cursor: pointer;
       user-select: none;
       font-weight: 700;
+    }
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-25px);
+        filter: blur(6px);
+      }
+      50% {
+        opacity: 0.6;
+        filter: blur(3px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+    @keyframes fadeRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-25px);
+        filter: blur(6px);
+      }
+      50% {
+        opacity: 0.6;
+        filter: blur(3px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+      }
     }
